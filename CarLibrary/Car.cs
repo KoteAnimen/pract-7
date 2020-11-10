@@ -81,4 +81,21 @@ namespace CarLibrary
         
         
     }
+
+    public class Lorry : Car //класс описывающий грузовик, являющийся наследником от класса  Car
+    {
+        public int Capacity { get; set; } // свойство обозначающее грузоподъемность
+
+        public new void SetParams(string mark, int capacity)
+        {
+            MarkAuto = mark;
+            Capacity = capacity;
+        }
+
+        public string GetParams()
+        {
+            return "Грузовик марки " + MarkAuto + " с количеством цилиндров " + CountCylinders.ToString() + " мощностью " + Power.ToString() + " лошадей с грузоподъемностью " + Capacity ;
+        }
+
+    }
 }
