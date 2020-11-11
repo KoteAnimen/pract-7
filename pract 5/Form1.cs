@@ -111,7 +111,15 @@ namespace pract_5
 
         private void CompareAutos_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(cars[(int)firstAuto.Value] > cars[(int)secondAuto.Value]);
+            try
+            {
+                MessageBox.Show(cars[(int)firstAuto.Value - 1] > cars[(int)secondAuto.Value - 1]);
+            }
+            catch
+            {
+                MessageBox.Show("Список пуст или указанного элемента не существует");
+            }
+            
         }
 
         // события с грузовиками

@@ -165,7 +165,7 @@
             this.listBox.FormattingEnabled = true;
             this.listBox.Location = new System.Drawing.Point(6, 19);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(600, 69);
+            this.listBox.Size = new System.Drawing.Size(604, 69);
             this.listBox.TabIndex = 1;
             // 
             // groupBox1
@@ -244,16 +244,36 @@
             // secondAuto
             // 
             this.secondAuto.Location = new System.Drawing.Point(7, 74);
+            this.secondAuto.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.secondAuto.Name = "secondAuto";
             this.secondAuto.Size = new System.Drawing.Size(185, 20);
             this.secondAuto.TabIndex = 1;
+            this.secondAuto.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // firstAuto
             // 
             this.firstAuto.Location = new System.Drawing.Point(7, 32);
+            this.firstAuto.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.firstAuto.Name = "firstAuto";
             this.firstAuto.Size = new System.Drawing.Size(185, 20);
             this.firstAuto.TabIndex = 0;
+            this.firstAuto.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // ClearList
             // 
@@ -519,7 +539,7 @@
             this.listBoxLorry.FormattingEnabled = true;
             this.listBoxLorry.Location = new System.Drawing.Point(6, 19);
             this.listBoxLorry.Name = "listBoxLorry";
-            this.listBoxLorry.Size = new System.Drawing.Size(600, 69);
+            this.listBoxLorry.Size = new System.Drawing.Size(604, 69);
             this.listBoxLorry.TabIndex = 1;
             // 
             // Form1
