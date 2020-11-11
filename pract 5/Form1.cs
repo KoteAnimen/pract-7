@@ -121,18 +121,18 @@ namespace pract_5
             lorries.Add(lorry);
             lorry.SetParams(markLorry.Text, (int)countCylindersLorry.Value, (int)powerLorry.Value);
             lorry.SetParams((int)capacity.Value);
-            listBox.Items.Add(lorry.GetParams());
+            listBoxLorry.Items.Add(lorry.GetParams());
         }
 
         private void ChangeLorry_Click(object sender, EventArgs e)
         {
             Lorry lorry = new Lorry();
-            lorries[listBox.SelectedIndex] = lorry;
+            lorries[listBoxLorry.SelectedIndex] = lorry;
             try
             {
                 lorry.SetParams(markLorry.Text, (int)countCylindersLorry.Value, (int)powerLorry.Value);
                 lorry.SetParams((int)capacity.Value);
-                listBox.Items[listBox.SelectedIndex] = lorry.GetParams();
+                listBoxLorry.Items[listBoxLorry.SelectedIndex] = lorry.GetParams();
             }
             catch
             {
@@ -144,8 +144,8 @@ namespace pract_5
         {
             try
             {
-                listBox.Items.RemoveAt(listBox.SelectedIndex);
-                lorries.RemoveAt(listBox.SelectedIndex);
+                listBoxLorry.Items.RemoveAt(listBoxLorry.SelectedIndex);
+                lorries.RemoveAt(listBoxLorry.SelectedIndex);
             }
             catch
             {
@@ -155,7 +155,7 @@ namespace pract_5
 
         private void ClearAllList_Click(object sender, EventArgs e)
         {
-            listBox.Items.Clear();
+            listBoxLorry.Items.Clear();
             lorries.Clear();
         }
     }

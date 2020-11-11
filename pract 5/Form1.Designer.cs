@@ -70,6 +70,8 @@
             this.countCylindersLorry = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.markLorry = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.listBoxLorry = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -82,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.capacity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerLorry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countCylindersLorry)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -92,7 +95,7 @@
             this.Exit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1034, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(634, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -162,7 +165,7 @@
             this.listBox.FormattingEnabled = true;
             this.listBox.Location = new System.Drawing.Point(6, 19);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(509, 381);
+            this.listBox.Size = new System.Drawing.Size(600, 69);
             this.listBox.TabIndex = 1;
             // 
             // groupBox1
@@ -171,7 +174,7 @@
             this.groupBox1.Controls.Add(this.listBox);
             this.groupBox1.Location = new System.Drawing.Point(12, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(525, 407);
+            this.groupBox1.Size = new System.Drawing.Size(616, 100);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Автомобили";
@@ -189,7 +192,7 @@
             this.groupBox2.Controls.Add(this.countCylinders);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.markAuto);
-            this.groupBox2.Location = new System.Drawing.Point(543, 31);
+            this.groupBox2.Location = new System.Drawing.Point(12, 247);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(239, 407);
             this.groupBox2.TabIndex = 3;
@@ -369,7 +372,7 @@
             this.groupBox3.Controls.Add(this.countCylindersLorry);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.markLorry);
-            this.groupBox3.Location = new System.Drawing.Point(788, 31);
+            this.groupBox3.Location = new System.Drawing.Point(389, 247);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(239, 407);
             this.groupBox3.TabIndex = 11;
@@ -500,11 +503,31 @@
             this.markLorry.Size = new System.Drawing.Size(156, 20);
             this.markLorry.TabIndex = 0;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox4.Controls.Add(this.listBoxLorry);
+            this.groupBox4.Location = new System.Drawing.Point(12, 141);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(616, 100);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Грузовики";
+            // 
+            // listBoxLorry
+            // 
+            this.listBoxLorry.FormattingEnabled = true;
+            this.listBoxLorry.Location = new System.Drawing.Point(6, 19);
+            this.listBoxLorry.Name = "listBoxLorry";
+            this.listBoxLorry.Size = new System.Drawing.Size(600, 69);
+            this.listBoxLorry.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 450);
+            this.ClientSize = new System.Drawing.Size(634, 661);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -512,9 +535,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1050, 489);
+            this.MaximumSize = new System.Drawing.Size(650, 700);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1050, 489);
+            this.MinimumSize = new System.Drawing.Size(650, 700);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Практическая №7";
@@ -534,6 +557,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.capacity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerLorry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countCylindersLorry)).EndInit();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -582,6 +606,8 @@
         private System.Windows.Forms.NumericUpDown countCylindersLorry;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox markLorry;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ListBox listBoxLorry;
     }
 }
 
