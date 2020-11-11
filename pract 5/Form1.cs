@@ -15,11 +15,14 @@ namespace pract_5
     {
 
         public List<Car> cars = new List<Car>();
+        public List<Lorry> lorries = new List<Lorry>();
+
         public Form1()
         {
             InitializeComponent();
         }
 
+        // события с автомобилями
         private void AddButton_Click(object sender, EventArgs e)
         {
             Car car = new Car();
@@ -109,6 +112,51 @@ namespace pract_5
         private void CompareAutos_Click(object sender, EventArgs e)
         {
             MessageBox.Show(cars[(int)firstAuto.Value] > cars[(int)secondAuto.Value]);
+        }
+
+        // события с грузовиками
+        private void AddListLorry_Click(object sender, EventArgs e)
+        {
+            Lorry lorry = new Lorry();
+            lorries.Add(lorry);
+            lorry.SetParams(markLorry.Text, (int)countCylindersLorry.Value, (int)powerLorry.Value);
+            lorry.SetParams((int)capacity.Value);
+            listBox.Items.Add(lorry.GetParams());
+        }
+
+        private void ChangeLorry_Click(object sender, EventArgs e)
+        {
+            Lorry lorry = new Lorry();
+            lorries[listBox.SelectedIndex] = lorry;
+            try
+            {
+                lorry.SetParams(markLorry.Text, (int)countCylindersLorry.Value, (int)powerLorry.Value);
+                lorry.SetParams((int)capacity.Value);
+                listBox.Items[listBox.SelectedIndex] = lorry.GetParams();
+            }
+            catch
+            {
+                MessageBox.Show("Элемент списка не выбран");
+            }
+        }
+
+        private void DeleteLorry_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                listBox.Items.RemoveAt(listBox.SelectedIndex);
+                lorries.RemoveAt(listBox.SelectedIndex);
+            }
+            catch
+            {
+                MessageBox.Show("Элемент списка не выбран");
+            }
+        }
+
+        private void ClearAllList_Click(object sender, EventArgs e)
+        {
+            listBox.Items.Clear();
+            lorries.Clear();
         }
     }
 }

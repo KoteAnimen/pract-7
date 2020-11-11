@@ -86,9 +86,15 @@ namespace CarLibrary
     {
         public int Capacity { get; set; } // свойство обозначающее грузоподъемность
 
-        public new void SetParams(string mark, int capacity)
+        public new void SetParams(string mark, int cylinders, int power)
         {
             MarkAuto = mark;
+            CountCylinders = cylinders;
+            Power = power;            
+        }
+
+        public new void SetParams(int capacity)
+        {
             Capacity = capacity;
         }
 

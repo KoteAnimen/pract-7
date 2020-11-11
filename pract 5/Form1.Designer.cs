@@ -58,6 +58,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.markAuto = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.capacity = new System.Windows.Forms.NumericUpDown();
             this.ClearAllList = new System.Windows.Forms.Button();
             this.ChangeLorry = new System.Windows.Forms.Button();
             this.DeleteLorry = new System.Windows.Forms.Button();
@@ -65,11 +67,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.powerLorry = new System.Windows.Forms.NumericUpDown();
-            this.countCilyndersLorry = new System.Windows.Forms.NumericUpDown();
+            this.countCylindersLorry = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.markLorry = new System.Windows.Forms.TextBox();
-            this.capacity = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -79,9 +79,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.powerAuto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countCylinders)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.powerLorry)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countCilyndersLorry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.capacity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.powerLorry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countCylindersLorry)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -366,7 +366,7 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.powerLorry);
-            this.groupBox3.Controls.Add(this.countCilyndersLorry);
+            this.groupBox3.Controls.Add(this.countCylindersLorry);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.markLorry);
             this.groupBox3.Location = new System.Drawing.Point(788, 31);
@@ -376,6 +376,27 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Параметры грузовика";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 151);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(138, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Грузоподъемность тонны";
+            // 
+            // capacity
+            // 
+            this.capacity.Location = new System.Drawing.Point(6, 167);
+            this.capacity.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.capacity.Name = "capacity";
+            this.capacity.Size = new System.Drawing.Size(156, 20);
+            this.capacity.TabIndex = 10;
+            // 
             // ClearAllList
             // 
             this.ClearAllList.Location = new System.Drawing.Point(35, 372);
@@ -384,6 +405,7 @@
             this.ClearAllList.TabIndex = 9;
             this.ClearAllList.Text = "Очистить список";
             this.ClearAllList.UseVisualStyleBackColor = true;
+            this.ClearAllList.Click += new System.EventHandler(this.ClearAllList_Click);
             // 
             // ChangeLorry
             // 
@@ -393,6 +415,7 @@
             this.ChangeLorry.TabIndex = 8;
             this.ChangeLorry.Text = "Изменить";
             this.ChangeLorry.UseVisualStyleBackColor = true;
+            this.ChangeLorry.Click += new System.EventHandler(this.ChangeLorry_Click);
             // 
             // DeleteLorry
             // 
@@ -402,6 +425,7 @@
             this.DeleteLorry.TabIndex = 7;
             this.DeleteLorry.Text = "Удалить из списка";
             this.DeleteLorry.UseVisualStyleBackColor = true;
+            this.DeleteLorry.Click += new System.EventHandler(this.DeleteLorry_Click);
             // 
             // AddListLorry
             // 
@@ -411,6 +435,7 @@
             this.AddListLorry.TabIndex = 6;
             this.AddListLorry.Text = "Добавить";
             this.AddListLorry.UseVisualStyleBackColor = true;
+            this.AddListLorry.Click += new System.EventHandler(this.AddListLorry_Click);
             // 
             // label8
             // 
@@ -442,18 +467,18 @@
             this.powerLorry.Size = new System.Drawing.Size(156, 20);
             this.powerLorry.TabIndex = 3;
             // 
-            // countCilyndersLorry
+            // countCylindersLorry
             // 
-            this.countCilyndersLorry.Location = new System.Drawing.Point(6, 84);
-            this.countCilyndersLorry.Minimum = new decimal(new int[] {
+            this.countCylindersLorry.Location = new System.Drawing.Point(6, 84);
+            this.countCylindersLorry.Minimum = new decimal(new int[] {
             14,
             0,
             0,
             0});
-            this.countCilyndersLorry.Name = "countCilyndersLorry";
-            this.countCilyndersLorry.Size = new System.Drawing.Size(156, 20);
-            this.countCilyndersLorry.TabIndex = 2;
-            this.countCilyndersLorry.Value = new decimal(new int[] {
+            this.countCylindersLorry.Name = "countCylindersLorry";
+            this.countCylindersLorry.Size = new System.Drawing.Size(156, 20);
+            this.countCylindersLorry.TabIndex = 2;
+            this.countCylindersLorry.Value = new decimal(new int[] {
             14,
             0,
             0,
@@ -474,27 +499,6 @@
             this.markLorry.Name = "markLorry";
             this.markLorry.Size = new System.Drawing.Size(156, 20);
             this.markLorry.TabIndex = 0;
-            // 
-            // capacity
-            // 
-            this.capacity.Location = new System.Drawing.Point(6, 167);
-            this.capacity.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.capacity.Name = "capacity";
-            this.capacity.Size = new System.Drawing.Size(156, 20);
-            this.capacity.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 151);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Грузоподъемность";
             // 
             // Form1
             // 
@@ -527,9 +531,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.countCylinders)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.powerLorry)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countCilyndersLorry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.capacity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.powerLorry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countCylindersLorry)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,7 +579,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown powerLorry;
-        private System.Windows.Forms.NumericUpDown countCilyndersLorry;
+        private System.Windows.Forms.NumericUpDown countCylindersLorry;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox markLorry;
     }
